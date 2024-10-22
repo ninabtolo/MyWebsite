@@ -1,0 +1,165 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #FFF0E8;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - 130px); 
+    padding: 20px;
+    gap: 20px; 
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 42%; 
+}
+
+.card {
+    border: 4px solid #CC7E85;
+    background-color: #FFF0E8;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #45062E; /* Cor vinho */
+    text-align: center;
+    position: relative; 
+    
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card-text {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    list-style-type: disc;
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.card-text li {
+    margin-bottom: 10px;
+}
+
+.card-img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px; 
+    height: auto;
+}
+
+
+.card:hover {
+    transform: scale(1.03); 
+}
+
+.rosa {
+    background-color: #CC7E85;
+    color: #FFF0E8;
+}
+
+.large-left {
+    width: 53%; 
+}
+
+.small-right {
+    width: 45%;
+}
+
+.small-left {
+    width: 20%; 
+}
+
+.large-right {
+    width: 78%; 
+}
+
+.carousel {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    top: 0; 
+    left: 0; 
+}
+
+.carousel-image.active {
+    opacity: 1; 
+}
+
+@media (max-width: 900px) {
+    
+    .container {
+        height: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        height: auto; 
+        gap: 5px; 
+    }
+
+    .large-left, .small-right, .small-left, .large-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        height: auto;
+        margin-top: 20px; 
+        position: relative; 
+        z-index: 1; 
+    }
+
+    .carousel {
+        width: 100%;
+        height: 250px; 
+        overflow: hidden;
+    }
+
+    .carousel-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-image.active {
+        opacity: 1;
+    }
+}
+
+
+
+
+

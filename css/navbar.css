@@ -1,0 +1,144 @@
+nav {
+    background-color: #CC7E85;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 110px;
+}
+
+nav h1 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 32px;
+    color: #FFF0E8;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #FFF0E8;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Cinzel', serif;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #FFF0E8;
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #CC7E85;
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    padding: 10px 0;
+}
+
+.nav-links.active li {
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.nav-links.active li a {
+    font-size: 22px;
+    display: block;
+}
+
+nav ul li a {
+    color: #FFF0E8;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Cinzel', serif;
+    position: relative; 
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFF0E8; 
+    left: 50%;
+    bottom: -5px; 
+    transform: translateX(-50%);
+    transition: width 0.3s ease; 
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .nav-right ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 40px;
+        position: absolute;
+        right: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #CC7E85;
+        width: 100%;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        padding: 0;
+    }
+
+    .nav-links.active li {
+        width: 100%;
+        padding: 10px 20px; 
+    }
+
+    .nav-links.active li a {
+        font-size: 22px;
+        display: block;
+    }
+}

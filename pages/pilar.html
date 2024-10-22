@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cinzel:wght@400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pilar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <h1 class="site-title">Ana Clara Tolomelli</h1>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/experiencia.html">Experiência</a></li>
+                <li><a href="../pages/pilar.html">Pilar</a></li>
+            </ul>
+            <button class="menu-toggle">&#9776;</button> 
+        </div>
+        <script src="../js/navbar.js"></script>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="card large-left">
+                <h2 class="card-title" style="margin-bottom: 15px;">Pilar Escolhido</h2>
+                <ul class="card-text">
+                    <li><strong>Tenha abertura e honestidade ao falar e ouvir.</strong></li>
+                    <li>Tenha atitude respeitosa nos diálogos. Valorize diferentes perspectivas e opiniões</li>
+                    <li>Demonstre vulnerabilidade e ouça com a mente aberta.</li>
+                    <li>Desafie ideias e critique processos mas sendo gentil com pessoas</li>
+                </ul>
+                <!-- Adicionando a imagem no canto inferior direito -->
+                <img src="../img/foto3.png" alt="Foto 3" class="card-img">
+            </div>
+            <div class="card small-right rosa">
+                <h2 class="card-title" style="margin-bottom: 15px;">Motivo da Escolha</h2>
+                <ul class="card-text">
+                    <li><strong>Foi o pilar que mais me identifiquei porque percebi o quanto ele é essencial para o sucesso pessoal e coletivo nas minhas experiências no mercado de trabalho.</strong></li>
+                    <li>Adaptar meu estilo de comunicação ajudou a construir relacionamentos mais eficazes e a garantir que todos se sentissem à vontade, impactando positivamente os resultados.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card small-left">
+                <div class="carousel">
+                    <img src="../img/foto4.jpeg" alt="Foto 4" class="carousel-image active">
+                    <img src="../img/foto5.jpeg" alt="Foto 5" class="carousel-image">
+                    <img src="../img/foto6.jpeg" alt="Foto 6" class="carousel-image">
+                </div>
+            </div>
+            <div class="card large-right rosa">
+                <h2 class="card-title" style="margin-bottom: 15px;">Como o Pilar Impulsiona Meu Desenvolvimento</h2>
+                <ul class="card-text">
+                    <li><strong>Esse pilar me permite crescer e contribuir de maneira significativa.</strong></li>
+                    <li>Em um contexto empresarial/de estágio, as habilidades de escuta são imprescindíveis para potencializar o meu aprendizado, promover a troca de ideias e agregar as experiências que já tenho</li>
+                    <li>Uma comunicação honesta auxilia na criação de relações de confiança e transparência, o que também é essencial em um ambiente colaborativo.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const script = document.createElement('script');
+            script.src = '../js/navbar.js';
+            document.body.appendChild(script);
+        });
+    </script>
+    
+
+    <script src="../js/carrossel.js"></script>
+
+</body>
+</html>

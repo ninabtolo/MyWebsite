@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Clara Tolomelli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cinzel:wght@400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <h1 class="site-title">Ana Clara Tolomelli</h1>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/experiencia.html">Experiência</a></li>
+                <li><a href="pages/pilar.html">Pilar</a></li>
+            </ul>
+            <button class="menu-toggle">&#9776;</button> 
+        </div>
+        <script src="js/navbar.js"></script>
+    </nav>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="card">
+                <h2 class="card-title" style="margin-bottom: 15px;">Sobre Mim</h2>
+                <ul class="card-text">
+                    <li><strong>Nome:</strong> Ana Clara Tolomelli</li> <br>
+                    <li><strong>Idade:</strong> 19 anos</li> <br>
+                    <li><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</li> <br>
+                    <li><strong>Instituição:</strong> Faculdade de Tecnologia de São José dos Campos (FATEC-SJC)</li> <br>
+                    <li><strong>Principal interesse pessoal:</strong> Leitura</li> <br>
+                    <li><strong>Por que escolhi a TI?:</strong> Escolhi tecnologia principalmente por seu potencial transformador. O dinamismo do setor me motiva a procurar por soluções inovadoras que melhoram processos e a vida das pessoas.</li> <br>
+                    <li><strong>Objetivo:</strong> Como estagiária, busco aprender e evoluir profissionalmente. Minha proatividade e capacidade de resolver desafios me permitem agregar valor com novas ideias, impactando positivamente os projetos em que atuo.</li> <br>
+                </ul>
+            </div>
+        </div>        
+        <div class="right-column">
+            <div class="top-row">
+                <div class="card">
+                    <h2 class="card-title">Pilar</h2>
+                    <ul class="card-text">
+                        <li><strong>Pilar Escolhido:</strong> Tenha abertura e honestidade ao falar e ouvir.</li> <br>
+                        <li>Clique em "Saiba Mais" para entender o porquê da minha escolha.</li>
+                    </ul>
+                    <div class="card-button">
+                        <a href="pages/pilar.html" class="btn">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card rosa">
+                    <h2 class="card-title">Contato</h2>
+                    <div class="card-buttons">
+                        <a href="https://wa.link/2kmt50" class="contact-button" target="_blank">
+                            <img src="img/telefone.png" alt="Telefone" class="icon">
+                            <span class="button-text">WhatsApp</span>
+                        </a>
+                        <button class="contact-button" onclick="copyEmail()">
+                            <img src="img/gmail.png" alt="Gmail" class="icon">
+                            <span class="button-text">Gmail</span>
+                        </button>
+                        <a href="https://www.linkedin.com/in/anaclaratolomelli" class="contact-button" target="_blank">
+                            <img src="img/linkedin.png" alt="LinkedIn" class="icon">
+                            <span class="button-text">LinkedIn</span>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="card sem-padding">
+                    <img src="img/foto1.jpeg" alt="Foto 1" class="foto-card">
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="card">
+                    <h2 class="card-title">Experiência</h2>
+                    <ul class="card-text">
+                        <li>Nessa página, você encontrará um resumo das minhas principais vivências profissionais e como elas contribuíram para meu desenvolvimento na área de tecnologia.</li>
+                    </ul>
+                    <div class="card-button">
+                        <a href="pages/experiencia.html" class="btn">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Certifica-se de que o conteúdo da página foi completamente carregado
+        document.addEventListener("DOMContentLoaded", function() {
+            // Carrega o JavaScript da navbar apenas após o HTML estar completamente carregado
+            const script = document.createElement('script');
+            script.src = 'js/navbar.js';
+            document.body.appendChild(script);
+        });
+    </script>
+    
+
+    <script>
+        function copyEmail() {
+            const email = "ninabtolomelli6@gmail.com";
+            navigator.clipboard.writeText(email).then(function() {
+                // Criar o recado
+                const message = document.createElement('div');
+                message.innerText = 'E-mail copiado!';
+                message.style.position = 'fixed';
+                message.style.bottom = '20px';
+                message.style.right = '20px';
+                message.style.backgroundColor = '#CC7E85';
+                message.style.color = '#FFF';
+                message.style.padding = '10px';
+                document.body.appendChild(message);
+
+                // Remove o recado após 2 segundos
+                setTimeout(function() {
+                    document.body.removeChild(message);
+                }, 2000);
+            });
+        }
+    </script>
+
+
+</body>
+</html>
